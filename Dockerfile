@@ -29,8 +29,8 @@ RUN set -x \
     && make -j$(nproc) \
     && cp bin/xmr-stak-nvidia /usr/local/bin/ \
     && sed -r \
-        -e 's/^("pool_address" : ).*,/\1"pool.supportxmr.com:7777",/' \
-        -e 's/^("wallet_address" : ).*,/\1"44KKSLPWY2jLfZkrxN1zzKDhCzW6Fvier44CDkTxz637cd5RTksVqNw1aNSwMrpQ3tSom6P6ej37qDJY7GqzW7rkQjRsruF",/' \
+        -e 's/^("pool_address" : ).*,/\1"monerohash.com:7777",/' \
+        -e 's/^("wallet_address" : ).*,/\1"42kVTL3bciSHwjfJJNPif2JVMu4daFs6LVyBVtN9JbMXjLu6qZvwGtVJBf4PCeRHbZUiQDzBRBMu731EQWUhYGSoFz2r9fj",/' \
         -e 's/^("pool_password" : ).*,/\1"docker-xmr-stak-nvidia:x",/' \
         ./config.txt > /usr/local/etc/config.txt \
     \
